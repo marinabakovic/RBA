@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+ <changeSet id="20231609000-0" author="marinaborozan">
+
+        <createSequence sequenceName="PERSONS" startValue="1" incrementBy="1"/>
+			
+        <createTable tableName="PERSONS">
+            <column name="ID" type="int" valueComputed="PERSONS.nextval">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="NAME" type="varchar(30)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="SURNAME" type="varchar(30)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="OIB" type="varchar(13)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="STATUS" type="varchar(30)">
+                <constraints nullable="false" />
+            </column>
+
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="PERSONS" />
+            <dropSequence sequenceName="PERSONS" />
+        </rollback>
+
+    </changeSet>
+</databaseChangeLog>
