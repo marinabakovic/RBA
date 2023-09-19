@@ -4,7 +4,7 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
- <changeSet id="20231609000-0" author="marinaborozan">
+ <changeSet id="20231909000-0" author="mborozan">
 
         <createSequence sequenceName="PERSONS" startValue="1" incrementBy="1"/>
 			
