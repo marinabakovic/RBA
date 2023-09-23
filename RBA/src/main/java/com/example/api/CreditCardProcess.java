@@ -17,8 +17,17 @@ public class CreditCardProcess {
 
 	 @PostMapping("/addPerson")
 	 public ActionResult addPersonForCreatingCreditCard(@RequestBody Person person) {
+		insertIntoDB(person);
         return null;
     }
+
+	private ActionResult insertIntoDB(Person person) {
+		String sql = "INSERT INTO PERSONS (NAME, SURNAME, OIB, STATUS) VALUES (?, ?, ?, ?)";
+		ActionResult result = new ActionResult();
+		result.setStatus(ActionResult.StatusCode.OK);
+		result.setMessage("Rows updated!");
+		return result;
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(CreditCardProcess.class, args);
