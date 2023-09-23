@@ -1,3 +1,10 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "maven.pomfile.autoUpdateEffectivePOM": true,
+    "maven.terminal.useJavaHome": false,
+    "spring-boot.ls.java.home": "",
+    "java.home": "/Users/marinaborozan/Desktop/Develop/Java/JavaVirtualMachines/jdk1.8.0_341.jdk/Contents/Home",
+    "java.import.maven.disableTestClasspathFlag": true,
+    "maven.SKIP_TESTS": true,
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
